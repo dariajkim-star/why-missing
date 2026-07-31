@@ -94,10 +94,11 @@ def adjudicate(
     if present_umbrella:
         return Verdict(Form.REPORTED_ELSEWHERE, f"umbrella tag {present_umbrella[0]} observed")
 
-    if concept.part_tags and all(t in seen for t in concept.part_tags):
+    if concept.part_groups and all(set(g) & seen for g in concept.part_groups):
+        observed = [next(iter(sorted(set(g) & seen))) for g in concept.part_groups]
         return Verdict(
             Form.DERIVABLE_SUBTOTAL,
-            f"all components observed ({', '.join(concept.part_tags)}) - subtotal is computable",
+            f"all components observed ({', '.join(observed)}) - subtotal is computable",
         )
 
     if concept_evidence is False:

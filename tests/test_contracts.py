@@ -44,7 +44,7 @@ def test_each_concept_carries_its_own_absence_shape():
     lease liability has NEITHER (measured, spike 5) - that asymmetry is why
     the lease residual held and the intangible residual collapsed to zero.
     """
-    assert INTAN.umbrella_tags and INTAN.part_tags
+    assert INTAN.umbrella_tags and INTAN.part_groups
     assert not LEASE.umbrella_tags
 
 
@@ -198,3 +198,38 @@ def test_every_verdict_carries_an_evidence_line():
     """KILLS: allowing a verdict with no reason - that is a blacklist entry."""
     with pytest.raises(ValueError):
         Verdict(Form.REPORTED_ELSEWHERE, evidence="   ")
+
+
+# --- Contract 8 + 9: the acquisition layer's absence gate --------------------
+
+def test_a_server_error_during_acquisition_raises_instead_of_caching_absence(tmp_path, monkeypatch):
+    """KILLS: dropping the require_observable gate in the fetch path.
+
+    Spike 6 run 1 recorded "dataset unavailable" for archives it had merely
+    failed to reach. A 5xx must stop the run; only an authoritative 404 may be
+    remembered as "this file does not exist".
+    """
+    from adjudicator import sec
+
+    class Resp:
+        status_code = 503
+        content = b""
+
+    monkeypatch.setattr(sec.requests, "get", lambda *a, **k: Resp())
+    monkeypatch.setattr(sec.time, "sleep", lambda *_: None)
+    with pytest.raises(identity.AccessFailureIsNotAbsence):
+        sec._get("https://example.invalid/x.zip", tmp_path, "x.zip")
+    assert not (tmp_path / "x.zip.notfound").exists()
+
+
+def test_an_authoritative_404_is_remembered_as_nonexistence(tmp_path, monkeypatch):
+    from adjudicator import sec
+
+    class Resp:
+        status_code = 404
+        content = b""
+
+    monkeypatch.setattr(sec.requests, "get", lambda *a, **k: Resp())
+    monkeypatch.setattr(sec.time, "sleep", lambda *_: None)
+    assert sec._get("https://example.invalid/x.zip", tmp_path, "x.zip") is None
+    assert (tmp_path / "x.zip.notfound").exists()

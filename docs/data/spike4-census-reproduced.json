@@ -1,0 +1,290 @@
+{
+  "concept": "finite_lived_intangibles_net",
+  "window": [
+    "2024q3",
+    "2024q4",
+    "2025q1",
+    "2025q2"
+  ],
+  "archives_used": {
+    "2024q3": [
+      "2024q3_notes.zip"
+    ],
+    "2024q4": [
+      "2024q4_notes.zip"
+    ],
+    "2025q1": [
+      "2025q1_notes.zip"
+    ],
+    "2025q2": [
+      "2025q2_notes.zip"
+    ]
+  },
+  "residual_filings": 24,
+  "companies": [
+    {
+      "cik": 62234,
+      "accession": "0000062234-25-000006",
+      "company": "MARCUS CORP",
+      "sic": "7830",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "IntangibleAssetsGrossExcludingGoodwill"
+      ]
+    },
+    {
+      "cik": 95029,
+      "accession": "0001174947-25-000197",
+      "company": "STURM RUGER & CO INC",
+      "sic": "3480",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 763563,
+      "accession": "0000763563-25-000058",
+      "company": "CHEMUNG FINANCIAL CORP",
+      "sic": "6022",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 779544,
+      "accession": "0000779544-24-000052",
+      "company": "ARK RESTAURANTS CORP",
+      "sic": "5812",
+      "period": "20240930",
+      "quarter": "2024q4",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 784977,
+      "accession": "0000784977-25-000012",
+      "company": "PORTLAND GENERAL ELECTRIC CO /OR/",
+      "sic": "4911",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 914122,
+      "accession": "0001437749-25-014095",
+      "company": "PERMA-PIPE INTERNATIONAL HOLDINGS, INC.",
+      "sic": "3564",
+      "period": "20250131",
+      "quarter": "2025q2",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 922621,
+      "accession": "0000922621-25-000004",
+      "company": "ERIE INDEMNITY CO",
+      "sic": "6411",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ]
+    },
+    {
+      "cik": 931755,
+      "accession": "0000931755-25-000007",
+      "company": "AEI INCOME & GROWTH FUND XXI LTD PARTNERSHIP",
+      "sic": "6500",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ]
+    },
+    {
+      "cik": 1074828,
+      "accession": "0001654954-24-014480",
+      "company": "KNOW LABS, INC.",
+      "sic": "3829",
+      "period": "20240930",
+      "quarter": "2024q4",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ]
+    },
+    {
+      "cik": 1224608,
+      "accession": "0001224608-25-000006",
+      "company": "CNO FINANCIAL GROUP, INC.",
+      "sic": "6321",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "IntangibleAssetsGrossExcludingGoodwill"
+      ]
+    },
+    {
+      "cik": 1287865,
+      "accession": "0000950170-25-030989",
+      "company": "MEDICAL PROPERTIES TRUST INC",
+      "sic": "6798",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 1289945,
+      "accession": "0001289945-25-000008",
+      "company": "SPOK HOLDINGS, INC",
+      "sic": "4812",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ]
+    },
+    {
+      "cik": 1314152,
+      "accession": "0001314152-25-000031",
+      "company": "JLL INCOME PROPERTY TRUST, INC.",
+      "sic": "6798",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 1333493,
+      "accession": "0001333493-25-000027",
+      "company": "EHEALTH, INC.",
+      "sic": "6411",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ]
+    },
+    {
+      "cik": 1395585,
+      "accession": "0001437749-25-007535",
+      "company": "FIRST TRINITY FINANCIAL CORP",
+      "sic": "6311",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 1420368,
+      "accession": "0001477932-25-001990",
+      "company": "DLT RESOLUTION INC.",
+      "sic": "7200",
+      "period": "20231231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 1581068,
+      "accession": "0001581068-25-000009",
+      "company": "BRIXMOR PROPERTY GROUP INC.",
+      "sic": "6798",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 1590717,
+      "accession": "0001628280-25-005118",
+      "company": "CARETRUST REIT, INC.",
+      "sic": "6798",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ]
+    },
+    {
+      "cik": 1818550,
+      "accession": "0001477932-24-005890",
+      "company": "INCORDEX CORP.",
+      "sic": "7200",
+      "period": "20240630",
+      "quarter": "2024q3",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 1828962,
+      "accession": "0001828962-25-000039",
+      "company": "CRICUT, INC.",
+      "sic": "3559",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ]
+    },
+    {
+      "cik": 1934245,
+      "accession": "0001641172-25-002840",
+      "company": "NEWTON GOLF COMPANY, INC.",
+      "sic": "3949",
+      "period": "20241231",
+      "quarter": "2025q2",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ]
+    },
+    {
+      "cik": 1980845,
+      "accession": "0000950170-24-138472",
+      "company": "ENGENE HOLDINGS INC.",
+      "sic": "2836",
+      "period": "20241031",
+      "quarter": "2024q4",
+      "legs_present": [
+        "IntangibleAssetsGrossExcludingGoodwill"
+      ]
+    },
+    {
+      "cik": 1983736,
+      "accession": "0001641172-25-004026",
+      "company": "EVA LIVE INC",
+      "sic": "7370",
+      "period": "20241231",
+      "quarter": "2025q2",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ]
+    },
+    {
+      "cik": 1995920,
+      "accession": "0001995920-24-000026",
+      "company": "E-SMART CORP.",
+      "sic": "7371",
+      "period": "20240831",
+      "quarter": "2024q4",
+      "legs_present": [
+        "IntangibleAssetsGrossExcludingGoodwill"
+      ]
+    }
+  ]
+}

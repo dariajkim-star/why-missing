@@ -20,7 +20,11 @@ class Concept:
     key: str
     nature: str  # "stock" | "flow"
     main_tags: tuple[str, ...]  # any present => the amount IS in its standard place
-    part_tags: tuple[str, ...] = ()  # all present => derivable subtotal (form 3)
+    # Component GROUPS. The subtotal is derivable when EVERY group has at least
+    # one tag present - groups model synonyms (a gross leg can be tagged either
+    # FiniteLivedIntangibleAssetsGross or IntangibleAssetsGrossExcludingGoodwill),
+    # while separate groups model the distinct legs of the arithmetic.
+    part_groups: tuple[tuple[str, ...], ...] = ()
     umbrella_tags: tuple[str, ...] = ()  # any present => reported elsewhere (form 2)
     # SIC prefixes where the concept word means something else (form 6). GROWING list.
     homonym_sic_prefixes: tuple[str, ...] = ()
@@ -33,7 +37,8 @@ _REGISTRY: dict[str, Concept] = {
             key="operating_lease_liability",
             nature="stock",
             main_tags=("OperatingLeaseLiability",),
-            part_tags=("OperatingLeaseLiabilityCurrent", "OperatingLeaseLiabilityNoncurrent"),
+            part_groups=(("OperatingLeaseLiabilityCurrent",),
+                         ("OperatingLeaseLiabilityNoncurrent",)),
             umbrella_tags=(),  # spike 1: no umbrella tag exists for this concept (measured)
             # mineral leases / BOEM right-of-use (spike 3-V, 42% of the sample)
             homonym_sic_prefixes=("13", "1382", "1000"),
@@ -42,14 +47,29 @@ _REGISTRY: dict[str, Concept] = {
             key="finite_lived_intangibles_net",
             nature="stock",
             main_tags=("FiniteLivedIntangibleAssetsNet",),
-            part_tags=(
-                "FiniteLivedIntangibleAssetsGross",
-                "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+            part_groups=(
+                # gross leg - synonyms (IntangibleAssetsGrossExcludingGoodwill
+                # found on Trex by the M1 reproduction)
+                ("FiniteLivedIntangibleAssetsGross", "IntangibleAssetsGrossExcludingGoodwill"),
+                ("FiniteLivedIntangibleAssetsAccumulatedAmortization",),
             ),
-            umbrella_tags=("IntangibleAssetsNetExcludingGoodwill",),
+            # GROWING list. The last three were added 2026-07-31 by the M1 golden
+            # reproduction, which surfaced HCA / Trex / Lazard as false residuals -
+            # the third time this project's tag list was caught incomplete, and the
+            # fourth consecutive hit for the big-company self-check rule. The
+            # aggregate-with-goodwill shape is oracle-sanctioned: the spike 4 census
+            # classified Chemung Financial's "Goodwill and other intangible assets,
+            # net" line as class b (reported elsewhere), not as an omission.
+            umbrella_tags=(
+                "IntangibleAssetsNetExcludingGoodwill",
+                "IntangibleAssetsNetIncludingGoodwill",
+                "OtherIntangibleAssetsNet",
+            ),
             # REIT in-place lease intangibles / insurance DAC-VOBA / utility
-            # intangible plant (spike 4 - the sixth form's widest expansion)
-            homonym_sic_prefixes=("6798", "631", "641", "4911"),
+            # intangible plant (spike 4 - the sixth form's widest expansion).
+            # 6500 added 2026-07-31: the census's AEI Income & Growth Fund sits
+            # there, and the registry had drifted behind the measured census.
+            homonym_sic_prefixes=("6798", "6500", "631", "641", "4911"),
         ),
         Concept(
             key="goodwill",

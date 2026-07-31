@@ -1,0 +1,9 @@
+{
+  "output": "spike4-census-reproduced.json",
+  "inputs": {
+    "2024q3": "469348be7d94543e6c5004ef74271516412ddc5e7bf1222e93552d0069b3b314",
+    "2024q4": "489008b8ea925bf908cc27964baf0bb8f70da765508f231eff88dfd659c175f2",
+    "2025q1": "fd734784b78f0c615cb7c052493c2947c05d79d4e1c5804a70a0d3d59fea27bf",
+    "2025q2": "f81f9a25ddb3cefe0f07a9dd9f42cf293309f64e74803b0c03cb8f60cdfa5770"
+  }
+}
