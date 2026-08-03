@@ -1,0 +1,759 @@
+{
+  "grade": "post-hoc in-sample fit",
+  "rule_sha256": "d6ab3f9ef65e71bb5e741cf44a63556bdd103d14e03cb4b5bd235b482a9792cd",
+  "residual_sha256": "def8eb9342c8b62521cedf94f4838c46a3d0807b5d2ba32a6eebd36b4c0dc5dd",
+  "census_sha256": "14947b858d26ac332d8e0bdf7bccb7e2de21e6d8a7562021fea678565ba241b4",
+  "results": [
+    {
+      "stratum": "M",
+      "name": "MEDICAL PROPERTIES TRUST",
+      "klass": "c",
+      "sic": "6798",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "INDUSTRY_HOMONYM"
+      ],
+      "scores": [
+        7,
+        3
+      ],
+      "rules": [
+        "R-03",
+        "R-04",
+        "R-08",
+        "V-08",
+        "V-09"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "tie": false,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-08] future amortisation schedule tag FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths observed - an unamortised balance REMAINS at period end",
+        "[V-09] future amortisation schedule totals 142275000.0000 USD (as of 20241231) - a DIRECT statement that an unamortised balance remains at period end",
+        "[R-03] SIC 6798 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "BRIXMOR",
+      "klass": "c",
+      "sic": "6798",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "INDUSTRY_HOMONYM"
+      ],
+      "scores": [
+        7,
+        3
+      ],
+      "rules": [
+        "R-03",
+        "R-04",
+        "R-08",
+        "V-08",
+        "V-09"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "tie": false,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-08] future amortisation schedule tag FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths observed - an unamortised balance REMAINS at period end",
+        "[V-09] future amortisation schedule totals 66131000.0000 USD (as of 20241231) - a DIRECT statement that an unamortised balance remains at period end",
+        "[R-03] SIC 6798 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "CARETRUST",
+      "klass": "c",
+      "sic": "6798",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "NOT_APPLICABLE",
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        3,
+        3,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-05'",
+        "V-04"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "tie": true,
+      "off_top": "INDUSTRY_HOMONYM",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name",
+        "[V-04] gross moved 5283000.0000 USD (20231231) -> 4388000.0000 USD (20241231): a DECREASE - a disposal/write-off occurred (weak: a partial disposal is not a full one)",
+        "[R-03] SIC 6798 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "JLL INCOME PROPERTY",
+      "klass": "c",
+      "sic": "6798",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "INDUSTRY_HOMONYM",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        4,
+        3,
+        1
+      ],
+      "rules": [
+        "R-03",
+        "R-04",
+        "V-07"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "tie": false,
+      "off_top": "INDUSTRY_HOMONYM",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[V-07] accumulated amortisation moved 145228000.0000 USD (20231231) -> 159737000.0000 USD (20241231): an INCREASE - an amortisable balance existed during the period (it may have been exactly exhausted at period end, so form 4 is only mildly discounted)",
+        "[R-03] SIC 6798 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "AEI INCOME & GROWTH FUND",
+      "klass": "c",
+      "sic": "6500",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "INDUSTRY_HOMONYM"
+      ],
+      "scores": [
+        5,
+        3
+      ],
+      "rules": [
+        "R-03",
+        "R-05'",
+        "R-08"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "tie": false,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [
+        "V-05: gross unchanged at 864490.0000 USD (20231231 -> 20241231, tau=10) - values do NOT separate forms 2 and 4 here (U-9); no score"
+      ],
+      "obs": [
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name",
+        "[R-08] future amortisation schedule tag FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths observed - an unamortised balance REMAINS at period end",
+        "[R-03] SIC 6500 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "FIRST TRINITY FINANCIAL",
+      "klass": "c",
+      "sic": "6311",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "INDUSTRY_HOMONYM",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        4,
+        3,
+        1
+      ],
+      "rules": [
+        "R-03",
+        "R-04",
+        "V-07"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "tie": false,
+      "off_top": "INDUSTRY_HOMONYM",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[V-07] accumulated amortisation moved 4962525.0000 USD (20231231) -> 5146438.0000 USD (20241231): an INCREASE - an amortisable balance existed during the period (it may have been exactly exhausted at period end, so form 4 is only mildly discounted)",
+        "[R-03] SIC 6311 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "PORTLAND GENERAL ELECTRIC",
+      "klass": "c",
+      "sic": "4911",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "INDUSTRY_HOMONYM"
+      ],
+      "scores": [
+        10,
+        3
+      ],
+      "rules": [
+        "R-03",
+        "R-04",
+        "R-08",
+        "V-07",
+        "V-09"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "tie": false,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-08] future amortisation schedule tag FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths observed - an unamortised balance REMAINS at period end",
+        "[V-07] accumulated amortisation moved 558000000.0000 USD (20231231) -> 611000000.0000 USD (20241231): an INCREASE - an amortisable balance existed during the period (it may have been exactly exhausted at period end, so form 4 is only mildly discounted)",
+        "[V-09] future amortisation schedule totals 234000000.0000 USD (as of 20241231) - a DIRECT statement that an unamortised balance remains at period end",
+        "[R-03] SIC 4911 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "STURM RUGER",
+      "klass": "b",
+      "sic": "3480",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        10
+      ],
+      "rules": [
+        "R-04",
+        "R-08",
+        "V-07",
+        "V-09"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "tie": false,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [
+        "duplicate-values: schedule FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths 20241231 carries 100000.0000 vs 400000.0000 - excluded from the V-09 sum (C-8/U-14)",
+        "duplicate-values: schedule FiniteLivedIntangibleAssetsAmortizationExpenseYearFive 20241231 carries 100000.0000 vs 400000.0000 - excluded from the V-09 sum (C-8/U-14)",
+        "duplicate-values: schedule FiniteLivedIntangibleAssetsAmortizationExpenseYearFour 20241231 carries 100000.0000 vs 400000.0000 - excluded from the V-09 sum (C-8/U-14)",
+        "duplicate-values: schedule FiniteLivedIntangibleAssetsAmortizationExpenseYearThree 20241231 carries 100000.0000 vs 400000.0000 - excluded from the V-09 sum (C-8/U-14)",
+        "duplicate-values: schedule FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo 20241231 carries 100000.0000 vs 400000.0000 - excluded from the V-09 sum (C-8/U-14)"
+      ],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-08] future amortisation schedule tag FiniteLivedIntangibleAssetsAmortizationExpenseAfterYearFive observed - an unamortised balance REMAINS at period end",
+        "[V-07] accumulated amortisation moved 7171000.0000 USD (20231231) -> 8008000.0000 USD (20241231): an INCREASE - an amortisable balance existed during the period (it may have been exactly exhausted at period end, so form 4 is only mildly discounted)",
+        "[V-09] future amortisation schedule totals 400000.0000 USD (as of 20241231) - a DIRECT statement that an unamortised balance remains at period end"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "CHEMUNG FINANCIAL",
+      "klass": "b",
+      "sic": "6022",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "tie": true,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [
+        "duplicate-values: same (tag, ddate, qtrs=0, uom) carries FiniteLivedIntangibleAssetsAccumulatedAmortization=11608000.0000 vs FiniteLivedIntangibleAssetsAccumulatedAmortization=5975000.0000 vs FiniteLivedIntangibleAssetsAccumulatedAmortization=5633000.0000 - no value is picked (C-8/U-14)"
+      ],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "PERMA-PIPE",
+      "klass": "b",
+      "sic": "3564",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        6
+      ],
+      "rules": [
+        "R-04",
+        "R-08",
+        "V-06",
+        "V-09"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "tie": false,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-08] future amortisation schedule tag FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths observed - an unamortised balance REMAINS at period end",
+        "[V-09] future amortisation schedule totals 500000.0000 USD (as of 20250131) - a DIRECT statement that an unamortised balance remains at period end"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "INCORDEX",
+      "klass": "b",
+      "sic": "7200",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "tie": true,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [
+        "duplicate-values: same (tag, ddate, qtrs=0, uom) carries FiniteLivedIntangibleAssetsAccumulatedAmortization=2183.0000 vs FiniteLivedIntangibleAssetsAccumulatedAmortization=943.0000 vs FiniteLivedIntangibleAssetsAccumulatedAmortization=4576.0000 - no value is picked (C-8/U-14)"
+      ],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "EVA LIVE",
+      "klass": "b",
+      "sic": "7370",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-05'"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "tie": true,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [
+        "U-10: no prior-year gross within 300-400 days - V-03/V-04/V-05 dormant; dormancy is NOT read as form 4 (C-9)"
+      ],
+      "obs": [
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name",
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "SPOK HOLDINGS",
+      "klass": "a",
+      "sic": "4812",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        5
+      ],
+      "rules": [
+        "R-05'",
+        "V-02"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "NOT_APPLICABLE",
+      "tie": false,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name",
+        "[V-02] as of 20241231: FiniteLivedIntangibleAssetsGross = 0 USD (explicitly tagged) - a tagged 0 is an active statement, not silence"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "EHEALTH",
+      "klass": "a",
+      "sic": "6411",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        3,
+        2,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-05'"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "NOT_APPLICABLE",
+      "tie": false,
+      "off_top": "INDUSTRY_HOMONYM",
+      "conflicts": [],
+      "value_notes": [
+        "V-05: gross unchanged at 17200000.0000 USD (20231231 -> 20241231, tau=100000) - values do NOT separate forms 2 and 4 here (U-9); no score"
+      ],
+      "obs": [
+        "[R-03] SIC 6411 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name",
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "DLT RESOLUTION",
+      "klass": "a",
+      "sic": "7200",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "NOT_APPLICABLE",
+      "tie": true,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "ERIE INDEMNITY",
+      "klass": "a",
+      "sic": "6411",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "INDUSTRY_HOMONYM"
+      ],
+      "scores": [
+        5,
+        3
+      ],
+      "rules": [
+        "R-03",
+        "R-05'",
+        "V-03"
+      ],
+      "p1": false,
+      "rany": false,
+      "hit_as": "-",
+      "tie": false,
+      "off_top": "INDUSTRY_HOMONYM",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name",
+        "[V-03] gross moved 304452000.0000 USD (20231231) -> 351814000.0000 USD (20241231): an INCREASE - an acquisition occurred in the period (U-15: impairment/sub-year lives/non-acquisition increases can defeat this)",
+        "[R-03] SIC 6411 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "ARK RESTAURANTS",
+      "klass": "a",
+      "sic": "5812",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        10
+      ],
+      "rules": [
+        "R-04",
+        "R-08",
+        "V-07",
+        "V-09"
+      ],
+      "p1": false,
+      "rany": false,
+      "hit_as": "-",
+      "tie": false,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-08] future amortisation schedule tag FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths observed - an unamortised balance REMAINS at period end",
+        "[V-07] accumulated amortisation moved 2441000.0000 USD (20230930) -> 2530000.0000 USD (20240930): an INCREASE - an amortisable balance existed during the period (it may have been exactly exhausted at period end, so form 4 is only mildly discounted)",
+        "[V-09] future amortisation schedule totals 113000.0000 USD (as of 20240930) - a DIRECT statement that an unamortised balance remains at period end"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "KNOW LABS",
+      "klass": "a",
+      "sic": "3829",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        5
+      ],
+      "rules": [
+        "R-05'",
+        "V-02"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "NOT_APPLICABLE",
+      "tie": false,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name",
+        "[V-02] as of 20240930: FiniteLivedIntangibleAssetsGross = 0 USD (explicitly tagged) - a tagged 0 is an active statement, not silence"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "NEWTON GOLF",
+      "klass": "a",
+      "sic": "3949",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-05'"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "NOT_APPLICABLE",
+      "tie": true,
+      "off_top": "REPORTED_ELSEWHERE",
+      "conflicts": [],
+      "value_notes": [],
+      "obs": [
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name",
+        "[R-05'] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - an intangible WAS acquired and capitalised; whether a balance remains at period end is not decided by the tag name"
+      ]
+    }
+  ],
+  "G1": [
+    0,
+    7
+  ],
+  "G2": [
+    7,
+    12
+  ],
+  "G3": [
+    17,
+    19
+  ],
+  "G4": {
+    "E1": 0,
+    "E2": 0,
+    "E3": 0
+  },
+  "F2": [
+    {
+      "name": "CARETRUST",
+      "klass": "c",
+      "off": "INDUSTRY_HOMONYM",
+      "on": "NOT_APPLICABLE",
+      "v_rules": [
+        "V-04"
+      ]
+    },
+    {
+      "name": "JLL INCOME PROPERTY",
+      "klass": "c",
+      "off": "INDUSTRY_HOMONYM",
+      "on": "REPORTED_ELSEWHERE",
+      "v_rules": [
+        "V-07"
+      ]
+    },
+    {
+      "name": "FIRST TRINITY FINANCIAL",
+      "klass": "c",
+      "off": "INDUSTRY_HOMONYM",
+      "on": "REPORTED_ELSEWHERE",
+      "v_rules": [
+        "V-07"
+      ]
+    },
+    {
+      "name": "SPOK HOLDINGS",
+      "klass": "a",
+      "off": "REPORTED_ELSEWHERE",
+      "on": "NOT_APPLICABLE",
+      "v_rules": [
+        "V-02"
+      ]
+    },
+    {
+      "name": "ERIE INDEMNITY",
+      "klass": "a",
+      "off": "INDUSTRY_HOMONYM",
+      "on": "REPORTED_ELSEWHERE",
+      "v_rules": [
+        "V-03"
+      ]
+    },
+    {
+      "name": "KNOW LABS",
+      "klass": "a",
+      "off": "REPORTED_ELSEWHERE",
+      "on": "NOT_APPLICABLE",
+      "v_rules": [
+        "V-02"
+      ]
+    }
+  ],
+  "F3": 6
+}

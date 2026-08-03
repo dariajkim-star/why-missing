@@ -1,0 +1,612 @@
+{
+  "rule_sha256": "012fb8080cca540e434905214175983f8ea625f60cb590e43c8c529929920b96",
+  "results": [
+    {
+      "stratum": "M",
+      "name": "MEDICAL PROPERTIES TRUST",
+      "klass": "c",
+      "sic": "6798",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        3,
+        2,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": false,
+      "obs": [
+        "[R-03] SIC 6798 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "BRIXMOR",
+      "klass": "c",
+      "sic": "6798",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        3,
+        2,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": false,
+      "obs": [
+        "[R-03] SIC 6798 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "CARETRUST",
+      "klass": "c",
+      "sic": "6798",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        3,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-05"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "b_top": "CANDIDATE_OMISSION",
+      "b_p1": false,
+      "obs": [
+        "[R-03] SIC 6798 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-05] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - the acquisition cost IS disclosed"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "JLL INCOME PROPERTY",
+      "klass": "c",
+      "sic": "6798",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        3,
+        2,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": false,
+      "obs": [
+        "[R-03] SIC 6798 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "AEI INCOME & GROWTH FUND",
+      "klass": "c",
+      "sic": "6500",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        3,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-05"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "b_top": "CANDIDATE_OMISSION",
+      "b_p1": false,
+      "obs": [
+        "[R-03] SIC 6500 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-05] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - the acquisition cost IS disclosed"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "FIRST TRINITY FINANCIAL",
+      "klass": "c",
+      "sic": "6311",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        3,
+        2,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": false,
+      "obs": [
+        "[R-03] SIC 6311 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "M",
+      "name": "PORTLAND GENERAL ELECTRIC",
+      "klass": "c",
+      "sic": "4911",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        3,
+        2,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "INDUSTRY_HOMONYM",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": false,
+      "obs": [
+        "[R-03] SIC 4911 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "STURM RUGER",
+      "klass": "b",
+      "sic": "3480",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": true,
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "CHEMUNG FINANCIAL",
+      "klass": "b",
+      "sic": "6022",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": true,
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "PERMA-PIPE",
+      "klass": "b",
+      "sic": "3564",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": true,
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "INCORDEX",
+      "klass": "b",
+      "sic": "7200",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": true,
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "EVA LIVE",
+      "klass": "b",
+      "sic": "7370",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        2
+      ],
+      "rules": [
+        "R-05"
+      ],
+      "p1": true,
+      "rany": true,
+      "hit_as": "REPORTED_ELSEWHERE",
+      "b_top": "CANDIDATE_OMISSION",
+      "b_p1": false,
+      "obs": [
+        "[R-05] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - the acquisition cost IS disclosed"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "SPOK HOLDINGS",
+      "klass": "a",
+      "sic": "4812",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        2
+      ],
+      "rules": [
+        "R-05"
+      ],
+      "p1": false,
+      "rany": false,
+      "hit_as": "-",
+      "b_top": "CANDIDATE_OMISSION",
+      "b_p1": false,
+      "obs": [
+        "[R-05] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - the acquisition cost IS disclosed"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "EHEALTH",
+      "klass": "a",
+      "sic": "6411",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        3,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-05"
+      ],
+      "p1": false,
+      "rany": false,
+      "hit_as": "-",
+      "b_top": "CANDIDATE_OMISSION",
+      "b_p1": false,
+      "obs": [
+        "[R-03] SIC 6411 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-05] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - the acquisition cost IS disclosed"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "DLT RESOLUTION",
+      "klass": "a",
+      "sic": "7200",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "NOT_APPLICABLE",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": false,
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "ERIE INDEMNITY",
+      "klass": "a",
+      "sic": "6411",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "INDUSTRY_HOMONYM",
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        3,
+        2
+      ],
+      "rules": [
+        "R-03",
+        "R-05"
+      ],
+      "p1": false,
+      "rany": false,
+      "hit_as": "-",
+      "b_top": "CANDIDATE_OMISSION",
+      "b_p1": false,
+      "obs": [
+        "[R-03] SIC 6411 - in this industry the concept word is a different account (exclusion list is GROWING, not complete)",
+        "[R-05] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - the acquisition cost IS disclosed"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "ARK RESTAURANTS",
+      "klass": "a",
+      "sic": "5812",
+      "tags": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE",
+        "NOT_APPLICABLE"
+      ],
+      "scores": [
+        2,
+        2
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "p1": false,
+      "rany": true,
+      "hit_as": "NOT_APPLICABLE",
+      "b_top": "REPORTED_ELSEWHERE",
+      "b_p1": false,
+      "obs": [
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names",
+        "[R-04] accumulated amortisation FiniteLivedIntangibleAssetsAccumulatedAmortization observed, no gross tag - an amortisable asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not decidable from tag names"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "KNOW LABS",
+      "klass": "a",
+      "sic": "3829",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        2
+      ],
+      "rules": [
+        "R-05"
+      ],
+      "p1": false,
+      "rany": false,
+      "hit_as": "-",
+      "b_top": "CANDIDATE_OMISSION",
+      "b_p1": false,
+      "obs": [
+        "[R-05] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - the acquisition cost IS disclosed"
+      ]
+    },
+    {
+      "stratum": "H",
+      "name": "NEWTON GOLF",
+      "klass": "a",
+      "sic": "3949",
+      "tags": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "status": "RANKED",
+      "shown": [
+        "REPORTED_ELSEWHERE"
+      ],
+      "scores": [
+        2
+      ],
+      "rules": [
+        "R-05"
+      ],
+      "p1": false,
+      "rany": false,
+      "hit_as": "-",
+      "b_top": "CANDIDATE_OMISSION",
+      "b_p1": false,
+      "obs": [
+        "[R-05] gross tag FiniteLivedIntangibleAssetsGross observed, no accumulated-amortisation tag - the acquisition cost IS disclosed"
+      ]
+    }
+  ],
+  "G1": [
+    7,
+    7
+  ],
+  "G2": [
+    5,
+    12
+  ],
+  "G3": [
+    14,
+    19
+  ],
+  "G4": {
+    "E1": 0,
+    "E2": 0,
+    "E3": 0
+  },
+  "baseline_B": {
+    "H_P@1": [
+      4,
+      12
+    ],
+    "E1_H": 6,
+    "E1_all24": 12
+  }
+}

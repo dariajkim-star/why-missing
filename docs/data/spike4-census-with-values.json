@@ -1,0 +1,1716 @@
+{
+  "concept": "finite_lived_intangibles_net",
+  "window": [
+    "2024q3",
+    "2024q4",
+    "2025q1",
+    "2025q2"
+  ],
+  "cache_archives_sha256": {
+    "2024q3_notes.zip": "4f9df2afb9f13cc59332041732d65615befc807e34419a4d529c727796b88761",
+    "2024q4_notes.zip": "9170c007b27cc886b4bf772e569c0202796635cacb620972e272de83f75ecaa3",
+    "2025q1_notes.zip": "f2e45bc99c25d615cf2261d537e35e0d4c0b6ab3e61c4dbdae46a82625181426",
+    "2025q2_notes.zip": "088afacafbd37170d24cef1102d66db0bd0e5bbe901ecbf3b36a25023a14d3a9"
+  },
+  "residual_filings": 24,
+  "companies": [
+    {
+      "cik": 62234,
+      "accession": "0000062234-25-000006",
+      "company": "MARCUS CORP",
+      "sic": "7830",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "IntangibleAssetsGrossExcludingGoodwill"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "IntangibleAssetsGrossExcludingGoodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "6904000.0000",
+          "value_raw": "6904000.0000"
+        },
+        {
+          "tag": "IntangibleAssetsGrossExcludingGoodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "6900000.0000",
+          "value_raw": "6900000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "Goodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "74996000.0000",
+          "value_raw": "74996000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "74996000.0000",
+          "value_raw": "74996000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 95029,
+      "accession": "0001174947-25-000197",
+      "company": "STURM RUGER & CO INC",
+      "sic": "3480",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "7171000.0000",
+          "value_raw": "7171000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "8008000.0000",
+          "value_raw": "8008000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20221231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "400000.0000",
+          "value_raw": "400000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20231231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "400000.0000",
+          "value_raw": "400000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20241231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "500000.0000",
+          "value_raw": "500000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseAfterYearFive",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "400000.0000",
+          "value_raw": "400000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "400000.0000",
+          "value_raw": "400000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFive",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "400000.0000",
+          "value_raw": "400000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFive",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFour",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "400000.0000",
+          "value_raw": "400000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFour",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearThree",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "400000.0000",
+          "value_raw": "400000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearThree",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "400000.0000",
+          "value_raw": "400000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20221231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "3264000.0000",
+          "value_raw": "3264000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20221231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "209000.0000",
+          "value_raw": "209000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20221231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "3055000.0000",
+          "value_raw": "3055000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "3264000.0000",
+          "value_raw": "3264000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "209000.0000",
+          "value_raw": "209000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "3055000.0000",
+          "value_raw": "3055000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "3264000.0000",
+          "value_raw": "3264000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "209000.0000",
+          "value_raw": "209000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "3055000.0000",
+          "value_raw": "3055000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 763563,
+      "accession": "0000763563-25-000058",
+      "company": "CHEMUNG FINANCIAL CORP",
+      "sic": "6022",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "11608000.0000",
+          "value_raw": "11608000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "5975000.0000",
+          "value_raw": "5975000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "5633000.0000",
+          "value_raw": "5633000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "11608000.0000",
+          "value_raw": "11608000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "5975000.0000",
+          "value_raw": "5975000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "5633000.0000",
+          "value_raw": "5633000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20231231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20241231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20221231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "21824000.0000",
+          "value_raw": "21824000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "21824000.0000",
+          "value_raw": "21824000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "21824000.0000",
+          "value_raw": "21824000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 779544,
+      "accession": "0000779544-24-000052",
+      "company": "ARK RESTAURANTS CORP",
+      "sic": "5812",
+      "period": "20240930",
+      "quarter": "2024q4",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20230930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2441000.0000",
+          "value_raw": "2441000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20240930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2530000.0000",
+          "value_raw": "2530000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20230930",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "85000.0000",
+          "value_raw": "85000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20240930",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "89000.0000",
+          "value_raw": "89000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths",
+          "ddate": "20240930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "85000.0000",
+          "value_raw": "85000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearThree",
+          "ddate": "20240930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "14000.0000",
+          "value_raw": "14000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo",
+          "ddate": "20240930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "14000.0000",
+          "value_raw": "14000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20220930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "17440000.0000",
+          "value_raw": "17440000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20230930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "7440000.0000",
+          "value_raw": "7440000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20240930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "3440000.0000",
+          "value_raw": "3440000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 784977,
+      "accession": "0000784977-25-000012",
+      "company": "PORTLAND GENERAL ELECTRIC CO /OR/",
+      "sic": "4911",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "558000000.0000",
+          "value_raw": "558000000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "611000000.0000",
+          "value_raw": "611000000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20221231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "58000000.0000",
+          "value_raw": "58000000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20231231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "61000000.0000",
+          "value_raw": "61000000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20241231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "72000000.0000",
+          "value_raw": "72000000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "70000000.0000",
+          "value_raw": "70000000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFive",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "13000000.0000",
+          "value_raw": "13000000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFour",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "33000000.0000",
+          "value_raw": "33000000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearThree",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "56000000.0000",
+          "value_raw": "56000000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "62000000.0000",
+          "value_raw": "62000000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 914122,
+      "accession": "0001437749-25-014095",
+      "company": "PERMA-PIPE INTERNATIONAL HOLDINGS, INC.",
+      "sic": "3564",
+      "period": "20250131",
+      "quarter": "2025q2",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20240131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2600000.0000",
+          "value_raw": "2600000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20250131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2600000.0000",
+          "value_raw": "2600000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths",
+          "ddate": "20250131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFive",
+          "ddate": "20250131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFour",
+          "ddate": "20250131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearThree",
+          "ddate": "20250131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo",
+          "ddate": "20250131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "100000.0000",
+          "value_raw": "100000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20230131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2227000.0000",
+          "value_raw": "2227000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20240131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2222000.0000",
+          "value_raw": "2222000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20250131",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2057000.0000",
+          "value_raw": "2057000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 922621,
+      "accession": "0000922621-25-000004",
+      "company": "ERIE INDEMNITY CO",
+      "sic": "6411",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "304452000.0000",
+          "value_raw": "304452000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "351814000.0000",
+          "value_raw": "351814000.0000"
+        }
+      ],
+      "evidence_facts": []
+    },
+    {
+      "cik": 931755,
+      "accession": "0000931755-25-000007",
+      "company": "AEI INCOME & GROWTH FUND XXI LTD PARTNERSHIP",
+      "sic": "6500",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "864490.0000",
+          "value_raw": "864490.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "864490.0000",
+          "value_raw": "864490.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20231231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "119277.0000",
+          "value_raw": "119277.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20241231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "119277.0000",
+          "value_raw": "119277.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths",
+          "ddate": "20251231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "119277.0000",
+          "value_raw": "119277.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFive",
+          "ddate": "20291231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "15362.0000",
+          "value_raw": "15362.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFour",
+          "ddate": "20281231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "19871.0000",
+          "value_raw": "19871.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearThree",
+          "ddate": "20271231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "83514.0000",
+          "value_raw": "83514.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo",
+          "ddate": "20261231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "92930.0000",
+          "value_raw": "92930.0000"
+        }
+      ]
+    },
+    {
+      "cik": 1074828,
+      "accession": "0001654954-24-014480",
+      "company": "KNOW LABS, INC.",
+      "sic": "3829",
+      "period": "20240930",
+      "quarter": "2024q4",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20230930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20240930",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        }
+      ],
+      "evidence_facts": []
+    },
+    {
+      "cik": 1224608,
+      "accession": "0001224608-25-000006",
+      "company": "CNO FINANCIAL GROUP, INC.",
+      "sic": "6321",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "IntangibleAssetsGrossExcludingGoodwill"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "IntangibleAssetsGrossExcludingGoodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "32900000.0000",
+          "value_raw": "32900000.0000"
+        },
+        {
+          "tag": "IntangibleAssetsGrossExcludingGoodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "28100000.0000",
+          "value_raw": "28100000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "Goodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "69500000.0000",
+          "value_raw": "69500000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "69500000.0000",
+          "value_raw": "69500000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 1287865,
+      "accession": "0000950170-25-030989",
+      "company": "MEDICAL PROPERTIES TRUST INC",
+      "sic": "6798",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "900000000.0000",
+          "value_raw": "900000000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "600000000.0000",
+          "value_raw": "600000000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20230430",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "286000000.0000",
+          "value_raw": "286000000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20231231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "286000000.0000",
+          "value_raw": "286000000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20240831",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "170000000.0000",
+          "value_raw": "170000000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20240930",
+          "qtrs": 1,
+          "uom": "USD",
+          "coreg": "",
+          "value": "22000000.0000",
+          "value_raw": "22000000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20241231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "149000000.0000",
+          "value_raw": "149000000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "29201000.0000",
+          "value_raw": "29201000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFive",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "26726000.0000",
+          "value_raw": "26726000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFour",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "28566000.0000",
+          "value_raw": "28566000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearThree",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "28730000.0000",
+          "value_raw": "28730000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "29052000.0000",
+          "value_raw": "29052000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 1289945,
+      "accession": "0001289945-25-000008",
+      "company": "SPOK HOLDINGS, INC",
+      "sic": "4812",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20210331",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "25000000.0000",
+          "value_raw": "25000000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20231231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "99175000.0000",
+          "value_raw": "99175000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "99175000.0000",
+          "value_raw": "99175000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "99200000.0000",
+          "value_raw": "99200000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 1314152,
+      "accession": "0001314152-25-000031",
+      "company": "JLL INCOME PROPERTY TRUST, INC.",
+      "sic": "6798",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "145228000.0000",
+          "value_raw": "145228000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "159737000.0000",
+          "value_raw": "159737000.0000"
+        }
+      ],
+      "evidence_facts": []
+    },
+    {
+      "cik": 1333493,
+      "accession": "0001333493-25-000027",
+      "company": "EHEALTH, INC.",
+      "sic": "6411",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "17200000.0000",
+          "value_raw": "17200000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "17200000.0000",
+          "value_raw": "17200000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20231231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20241231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        }
+      ]
+    },
+    {
+      "cik": 1395585,
+      "accession": "0001437749-25-007535",
+      "company": "FIRST TRINITY FINANCIAL CORP",
+      "sic": "6311",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "4962525.0000",
+          "value_raw": "4962525.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "5146438.0000",
+          "value_raw": "5146438.0000"
+        }
+      ],
+      "evidence_facts": []
+    },
+    {
+      "cik": 1420368,
+      "accession": "0001477932-25-001990",
+      "company": "DLT RESOLUTION INC.",
+      "sic": "7200",
+      "period": "20231231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20221231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20221231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "139848.0000",
+          "value_raw": "139848.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20221231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "-139848.0000",
+          "value_raw": "-139848.0000"
+        }
+      ],
+      "evidence_facts": []
+    },
+    {
+      "cik": 1581068,
+      "accession": "0001581068-25-000009",
+      "company": "BRIXMOR PROPERTY GROUP INC.",
+      "sic": "6798",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "445500000.0000",
+          "value_raw": "445500000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "433000000.0000",
+          "value_raw": "433000000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20221231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "18900000.0000",
+          "value_raw": "18900000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20231231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "16500000.0000",
+          "value_raw": "16500000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20241231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "14700000.0000",
+          "value_raw": "14700000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "22687000.0000",
+          "value_raw": "22687000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFive",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "6167000.0000",
+          "value_raw": "6167000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearFour",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "9115000.0000",
+          "value_raw": "9115000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearThree",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "12061000.0000",
+          "value_raw": "12061000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "16101000.0000",
+          "value_raw": "16101000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 1590717,
+      "accession": "0001628280-25-005118",
+      "company": "CARETRUST REIT, INC.",
+      "sic": "6798",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "5283000.0000",
+          "value_raw": "5283000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "4388000.0000",
+          "value_raw": "4388000.0000"
+        }
+      ],
+      "evidence_facts": []
+    },
+    {
+      "cik": 1818550,
+      "accession": "0001477932-24-005890",
+      "company": "INCORDEX CORP.",
+      "sic": "7200",
+      "period": "20240630",
+      "quarter": "2024q3",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20240630",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2183.0000",
+          "value_raw": "2183.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20240630",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "943.0000",
+          "value_raw": "943.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20240630",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "4576.0000",
+          "value_raw": "4576.0000"
+        }
+      ],
+      "evidence_facts": []
+    },
+    {
+      "cik": 1828962,
+      "accession": "0001828962-25-000039",
+      "company": "CRICUT, INC.",
+      "sic": "3559",
+      "period": "20241231",
+      "quarter": "2025q1",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsAccumulatedAmortization"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "1800000.0000",
+          "value_raw": "1800000.0000"
+        },
+        {
+          "tag": "FiniteLivedIntangibleAssetsAccumulatedAmortization",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2200000.0000",
+          "value_raw": "2200000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20221231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "700000.0000",
+          "value_raw": "700000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20231231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "1000000.0000",
+          "value_raw": "1000000.0000"
+        },
+        {
+          "tag": "AmortizationOfIntangibleAssets",
+          "ddate": "20241231",
+          "qtrs": 4,
+          "uom": "USD",
+          "coreg": "",
+          "value": "400000.0000",
+          "value_raw": "400000.0000"
+        }
+      ]
+    },
+    {
+      "cik": 1934245,
+      "accession": "0001641172-25-002840",
+      "company": "NEWTON GOLF COMPANY, INC.",
+      "sic": "3949",
+      "period": "20241231",
+      "quarter": "2025q2",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20231031",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "102000.0000",
+          "value_raw": "102000.0000"
+        }
+      ],
+      "evidence_facts": []
+    },
+    {
+      "cik": 1980845,
+      "accession": "0000950170-24-138472",
+      "company": "ENGENE HOLDINGS INC.",
+      "sic": "2836",
+      "period": "20241031",
+      "quarter": "2024q4",
+      "legs_present": [
+        "IntangibleAssetsGrossExcludingGoodwill"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "IntangibleAssetsGrossExcludingGoodwill",
+          "ddate": "20230531",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "FEAC",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "Goodwill",
+          "ddate": "20230531",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "FEAC",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        }
+      ]
+    },
+    {
+      "cik": 1983736,
+      "accession": "0001641172-25-004026",
+      "company": "EVA LIVE INC",
+      "sic": "7370",
+      "period": "20241231",
+      "quarter": "2025q2",
+      "legs_present": [
+        "FiniteLivedIntangibleAssetsGross"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "FiniteLivedIntangibleAssetsGross",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "98000.0000",
+          "value_raw": "98000.0000"
+        }
+      ],
+      "evidence_facts": [
+        {
+          "tag": "Goodwill",
+          "ddate": "20220630",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "1500000.0000",
+          "value_raw": "1500000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20221231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "1500000.0000",
+          "value_raw": "1500000.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20231231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "2010606.0000",
+          "value_raw": "2010606.0000"
+        },
+        {
+          "tag": "Goodwill",
+          "ddate": "20241231",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "0.0000",
+          "value_raw": "0.0000"
+        }
+      ]
+    },
+    {
+      "cik": 1995920,
+      "accession": "0001995920-24-000026",
+      "company": "E-SMART CORP.",
+      "sic": "7371",
+      "period": "20240831",
+      "quarter": "2024q4",
+      "legs_present": [
+        "IntangibleAssetsGrossExcludingGoodwill"
+      ],
+      "value_source_ok": true,
+      "facts": [
+        {
+          "tag": "IntangibleAssetsGrossExcludingGoodwill",
+          "ddate": "20230831",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "16500.0000",
+          "value_raw": "16500.0000"
+        },
+        {
+          "tag": "IntangibleAssetsGrossExcludingGoodwill",
+          "ddate": "20241031",
+          "qtrs": 0,
+          "uom": "USD",
+          "coreg": "",
+          "value": "173800.0000",
+          "value_raw": "173800.0000"
+        }
+      ],
+      "evidence_facts": []
+    }
+  ]
+}
