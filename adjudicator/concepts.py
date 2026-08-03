@@ -26,8 +26,25 @@ class Concept:
     # while separate groups model the distinct legs of the arithmetic.
     part_groups: tuple[tuple[str, ...], ...] = ()
     umbrella_tags: tuple[str, ...] = ()  # any present => reported elsewhere (form 2)
-    # SIC prefixes where the concept word means something else (form 6). GROWING list.
-    homonym_sic_prefixes: tuple[str, ...] = ()
+    # v3 R-03': EXACT 4-digit SIC codes where the concept word means something
+    # else (form 6), each with the one-line account it names in that industry.
+    # GROWING list (U-7): exact codes trade over-inclusion (the 6411 class) for
+    # a larger risk of unregistered-code silence. Never claimed complete.
+    homonym_sic_accounts: tuple[tuple[str, str], ...] = ()
+
+    @property
+    def homonym_sic_prefixes(self) -> tuple[str, ...]:
+        """Exact 4-digit codes. SICs are 4 digits, so the pre-existing
+        `startswith` call sites (verdict.py, v1/v2 rules) become exact matching
+        without touching the judgement logic - party decision 1 preserved."""
+        return tuple(code for code, _ in self.homonym_sic_accounts)
+
+    def homonym_account(self, sic: str) -> str | None:
+        """The account the concept word names in this SIC, or None."""
+        for code, account in self.homonym_sic_accounts:
+            if sic == code:
+                return account
+        return None
 
 
 _REGISTRY: dict[str, Concept] = {
@@ -40,8 +57,18 @@ _REGISTRY: dict[str, Concept] = {
             part_groups=(("OperatingLeaseLiabilityCurrent",),
                          ("OperatingLeaseLiabilityNoncurrent",)),
             umbrella_tags=(),  # spike 1: no umbrella tag exists for this concept (measured)
-            # mineral leases / BOEM right-of-use (spike 3-V, 42% of the sample)
-            homonym_sic_prefixes=("13", "1382", "1000"),
+            # v3 R-03' promotion of the old prefixes ("13", "1382", "1000"):
+            # mineral leases are NOT right-of-use leases (ASC 842-10-15-1
+            # scopes out mineral exploration rights).
+            homonym_sic_accounts=(
+                ("1311", "mineral lease - a mineral right, not a right-of-use lease (ASC 932)"),
+                ("1381", "mineral lease - a mineral right, not a right-of-use lease (ASC 932)"),
+                ("1382", "mineral lease - a mineral right, not a right-of-use lease (ASC 932)"),
+                ("1389", "mineral lease - a mineral right, not a right-of-use lease (ASC 932)"),
+                ("1000", "mineral lease - a mineral right, not a right-of-use lease (ASC 930)"),
+                ("1040", "mineral lease - a mineral right, not a right-of-use lease (ASC 930)"),
+                ("1090", "mineral lease - a mineral right, not a right-of-use lease (ASC 930)"),
+            ),
         ),
         Concept(
             key="finite_lived_intangibles_net",
@@ -65,17 +92,48 @@ _REGISTRY: dict[str, Concept] = {
                 "IntangibleAssetsNetIncludingGoodwill",
                 "OtherIntangibleAssetsNet",
             ),
-            # REIT in-place lease intangibles / insurance DAC-VOBA / utility
-            # intangible plant (spike 4 - the sixth form's widest expansion).
-            # 6500 added 2026-07-31: the census's AEI Income & Growth Fund sits
-            # there, and the registry had drifted behind the measured census.
-            homonym_sic_prefixes=("6798", "6500", "631", "641", "4911"),
+            # v3 R-03' (preregistration-v3 s3): exact 4-digit codes, one account
+            # line per code, derived from the accounting standard of the
+            # industry FAMILY - not an enumeration of the answer key (only 4 of
+            # these 22 codes occur in the sample). 6411 (insurance agents &
+            # brokers) is EXCLUDED: brokers do not underwrite, so they hold no
+            # DAC/VOBA - the old "641" prefix was over-inclusive.
+            homonym_sic_accounts=(
+                # real estate operators/investors - acquired in-place lease and
+                # above/below-market lease intangibles (ASC 805-20-25-10)
+                ("6500", "acquired-property in-place lease intangibles (ASC 805-20-25-10)"),
+                ("6512", "acquired-property in-place lease intangibles (ASC 805-20-25-10)"),
+                ("6513", "acquired-property in-place lease intangibles (ASC 805-20-25-10)"),
+                ("6514", "acquired-property in-place lease intangibles (ASC 805-20-25-10)"),
+                ("6519", "acquired-property in-place lease intangibles (ASC 805-20-25-10)"),
+                # audit 1-2: 6531/6552 carry an UNREINFORCED accounting line -
+                # firings must be named and their cases quoted only with that flag
+                ("6531", "lease intangibles of managed real estate (accounting basis UNREINFORCED - audit 1-2)"),
+                ("6552", "acquired-property lease intangibles (accounting basis UNREINFORCED - audit 1-2)"),
+                ("6798", "acquired-property in-place lease and above/below-market lease intangibles (ASC 805-20-25-10)"),
+                # insurance UNDERWRITERS - DAC / VOBA (ASC 944-30); 6411 excluded
+                ("6311", "deferred acquisition costs / VOBA (ASC 944-30)"),
+                ("6321", "deferred acquisition costs / VOBA (ASC 944-30)"),
+                ("6324", "deferred acquisition costs (ASC 944-30)"),
+                ("6331", "deferred acquisition costs (ASC 944-30)"),
+                ("6351", "deferred acquisition costs (ASC 944-30)"),
+                ("6361", "deferred acquisition costs (ASC 944-30)"),
+                ("6399", "deferred acquisition costs (ASC 944-30)"),
+                # rate-regulated utilities - intangible plant, a utility-plant
+                # component (ASC 980; 4941 cited on ASC 980 only - audit 1-2)
+                ("4911", "intangible plant, a utility-plant component (ASC 980)"),
+                ("4922", "intangible plant, a utility-plant component (ASC 980)"),
+                ("4923", "intangible plant, a utility-plant component (ASC 980)"),
+                ("4924", "intangible plant, a utility-plant component (ASC 980)"),
+                ("4931", "intangible plant, a utility-plant component (ASC 980)"),
+                ("4932", "intangible plant, a utility-plant component (ASC 980)"),
+                ("4941", "intangible plant, a utility-plant component (ASC 980)"),
+            ),
         ),
         Concept(
             key="goodwill",
             nature="stock",
             main_tags=("Goodwill",),
-            homonym_sic_prefixes=(),
         ),
         # Registered ONLY so the rejection is by design, not by absence of an entry.
         Concept(key="share_based_compensation", nature="flow",

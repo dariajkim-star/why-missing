@@ -124,6 +124,9 @@ class Opinion:
     tie: bool = False                        # rank 1 decided by enum order (s5-2)
     value_conflicts: tuple[str, ...] = ()    # C-8: surfaced, never arbitrated
     value_notes: tuple[str, ...] = ()        # scoreless value observations (V-05/U-10)
+    # v3 additions (F4 support - preregistration-v3 s5, audit addendum s2-2):
+    r15_attributed: tuple[str, ...] = ()     # rules whose evidence was attributed to form 6
+    r15_bonus: int = 0                       # corroboration form 6 received via R-15 (cap +2)
 
     @property
     def top_form(self) -> Form | None:
@@ -822,6 +825,366 @@ def rank_forms_v2(obs: ObservationV2, value_layer: bool = True) -> Opinion:
                    fired_rules=tuple(led.fired), dormant_rules=tuple(dormant),
                    tie=tie, value_conflicts=tuple(conflicts),
                    value_notes=tuple(value_notes))
+
+
+# ---------------------------------------------------------------------------
+# v3 - homonym evidence attribution (pre-registration: docs/evidence-rules-
+# preregistration-v3.md, audit: docs/evidence-rules-v3-audit-and-measurement-
+# addendum.md). Grade of anything measured with this layer: post-hoc**2
+# in-sample fit - the label may not be dropped.
+#
+# What v3 adds on top of v2 (v1 and v2 above are PRESERVED verbatim - the
+# comparison runs need them):
+#   R-03' exact 4-digit SIC codes with a per-code account line (concepts.py).
+#   R-15  in a homonym industry, shared-element rules (R-01/R-02/R-04/R-05'/
+#         R-06/R-08 and V-02..V-10) award NO form-2/form-4 weight; their
+#         observation sentences are generated anyway and ATTRIBUTED to the
+#         form-6 line, each giving form 6 a +1 corroboration CAPPED at +2
+#         total. The negative weight each rule gave form 1 is KEPT (an
+#         actively-used element means the disclosure system is alive).
+#   R-16  form-6 rebuttal by asset-class axis member - DORMANT (U-2: the
+#         pipeline reads no axis tags). Registered so the unreachability is
+#         the document's statement, not an accident (U-16).
+#   V-03' scale aligned to V-07: form2 +2, form4 -1 (was +3/-3); sentence
+#         replaced - an increase proves only that the pool grew in-period.
+#   V-08' scale aligned to V-04: form4 +1 (was +2).
+# NO company name, CIK or accession literal in this section.
+# ---------------------------------------------------------------------------
+
+BLIND_SPOTS_V3: tuple[str, ...] = BLIND_SPOTS_V2 + (
+    "U-16 form-6 rebuttal is machine-unreachable: in a homonym industry the proof that a"
+    " company ALSO holds ordinary ASC 350 intangibles lives in asset-class axis members or"
+    " prose, neither of which this pipeline reads (U-2) - so a homonym industry's genuine"
+    " forms 2 and 4 structurally rank behind form 6 (R-16 dormant)",
+)
+
+
+def rank_forms_v3(obs: ObservationV2, value_layer: bool = True) -> Opinion:
+    """v3 ranked opinion: v2 with R-03' exact codes, the R-15 attribution gate,
+    V-03'/V-08' scale alignment, R-16 dormant, U-16 on screen.
+
+    `value_layer=False` is the F2 OFF-run (audit addendum s2-2): the v3 NAME
+    layer - R-03' and R-15 included, since R-15 works from tag names and SIC
+    alone; V-01..V-11 all disabled.
+    """
+    concept = obs.concept
+    if concept.nature != "stock":
+        raise FlowConceptRejected(
+            f"G-02: {concept.key} is a flow concept - tag absence carries no signal")
+
+    seen = obs.seen
+    ev_seen = frozenset(f.tag for f in obs.evidence_facts)
+    conflicts: list[str] = []
+    value_notes: list[str] = []
+    dormant: list[str] = [
+        "R-09 dimension-only disclosure (pipeline does not read axis tags)",
+        "R-13 peer usage (U-8: cannot separate 'no peers' from 'cache unreadable')",
+        "R-16 form-6 rebuttal by asset-class axis member (DORMANT: the pipeline reads no"
+        " axis tags (U-2); until axes are loaded this rebuttal cannot fire - U-16)",
+    ]
+
+    main_hit = sorted(t for t in concept.main_tags if t in seen)
+    if main_hit:
+        return Opinion(status="PRESENT",
+                       gate_evidence=f"standard tag {main_hit[0]} observed",
+                       dormant_rules=tuple(dormant), fired_rules=("G-01",))
+
+    if obs.unreadable_datasets:
+        names = ", ".join(obs.unreadable_datasets)
+        return Opinion(status="NO_VERDICT",
+                       gate_evidence=f"{names} dataset lookup FAILED - not read as absence",
+                       needs_human_confirmation=True, blind_spots=BLIND_SPOTS_V3,
+                       dormant_rules=tuple(dormant), fired_rules=("G-03",))
+
+    led = _Ledger()
+    gross = _gross_group(concept)
+    accum = _accum_group(concept)
+    gross_hit = sorted(gross & seen)
+    accum_hit = sorted(accum & seen)
+    umbrella_hit = sorted(t for t in concept.umbrella_tags if t in seen)
+    schedule_hit = sorted(FUTURE_AMORTIZATION_SCHEDULE_TAGS & (seen | ev_seen))
+    expense_hit = sorted(AMORTIZATION_EXPENSE_TAGS & (seen | ev_seen))
+    goodwill_hit = sorted(GOODWILL_TAGS & (seen | ev_seen))
+
+    # --- R-15 gate state. Active exactly when R-03' fires (exact-code match). ---
+    homonym_account = concept.homonym_account(obs.sic) if obs.sic else None
+    r15_active = homonym_account is not None
+    r15_bonus = 0            # form-6 corroboration granted via R-15, cap +2
+    r15_attributed: list[str] = []
+
+    def award(rule_id: str, line: str, *, shared: bool, **weights: int) -> None:
+        """R-15 (preregistration-v3 s1-3): in a homonym industry a shared-element
+        rule awards no form-2/form-4 weight; its sentence is attributed to the
+        form-6 line (+1 corroboration, capped at +2 in total) and only its
+        NEGATIVE form-1 weight survives. Outside the gate: the rule as written."""
+        nonlocal r15_bonus
+        if not (r15_active and shared):
+            led.award(rule_id, line, **weights)
+            return
+        kept = {k: w for k, w in weights.items() if k == "omission" and w < 0}
+        bonus = 1 if r15_bonus < 2 else 0
+        r15_bonus += bonus
+        r15_attributed.append(rule_id + ("" if bonus else " (cap +2 reached: attributed, unscored)"))
+        attributed_line = (line + f" - in this industry these elements carry"
+                           f" {homonym_account} (R-15 attribution)")
+        led.award(rule_id, attributed_line, homonym=bonus, **kept)
+        if bonus == 0:
+            # the sentence must still stand on the form-6 line (nothing is hidden)
+            led.notes.setdefault(Form.INDUSTRY_HOMONYM, []).append(
+                f"[{rule_id}] {attributed_line}")
+
+    # ---- name layer ----
+    if umbrella_hit:
+        award("R-01",
+              f"umbrella tag {umbrella_hit[0]} observed - the amount sits under a broader label",
+              shared=True, elsewhere=+3, omission=-3)
+    if gross_hit and accum_hit:
+        award("R-02",
+              f"gross {gross_hit[0]} and accumulated amortisation {accum_hit[0]} both observed"
+              " - the net is computable by subtraction",
+              shared=True, derivable=+3, omission=-3)
+    if r15_active:
+        led.award("R-03'",
+                  f"SIC {obs.sic} - in this industry the concept word names a different"
+                  f" account: {homonym_account} (exact-code list, GROWING, not complete)",
+                  homonym=+3, omission=-2)
+    if accum_hit and not gross_hit and not umbrella_hit and not main_hit:
+        award("R-04",
+              f"accumulated amortisation {accum_hit[0]} observed, no gross tag - an amortisable"
+              " asset EXISTED and was disclosed somewhere; whether a balance REMAINS is not"
+              " decidable from tag names",
+              shared=True, elsewhere=+2, not_applicable=+2, omission=-2)
+    if gross_hit and not accum_hit and not umbrella_hit and not main_hit:
+        award("R-05'",
+              f"gross tag {gross_hit[0]} observed, no accumulated-amortisation tag"
+              " - an intangible WAS acquired and capitalised; whether a balance remains"
+              " at period end is not decided by the tag name",
+              shared=True, elsewhere=+2, not_applicable=+2, omission=-2)
+    if expense_hit and not (gross_hit or accum_hit or umbrella_hit):
+        award("R-06",
+              f"amortisation expense {expense_hit[0]} observed - a balance existed to amortise",
+              shared=True, elsewhere=+2, omission=-1)
+    if goodwill_hit and not (gross_hit or accum_hit or umbrella_hit or expense_hit):
+        led.award("R-07",
+                  f"goodwill {goodwill_hit[0]} observed, no separate intangible tag",
+                  not_applicable=+1)
+    if schedule_hit:
+        award("R-08",
+              f"future amortisation schedule tag {schedule_hit[0]} observed"
+              " - an unamortised balance REMAINS at period end",
+              shared=True, elsewhere=+3, not_applicable=-3, omission=-3)
+    if obs.concept_evidence is False:
+        led.award("R-10",
+                  f"no independent evidence that {concept.key} exists in this business"
+                  f"{': ' + obs.concept_evidence_source if obs.concept_evidence_source else ''}",
+                  not_applicable=+3, omission=-3)
+    if obs.concept_evidence is None and not led.fired:
+        return Opinion(status="NO_VERDICT",
+                       gate_evidence="concept existence unconfirmed - absence is not adjudicated",
+                       needs_human_confirmation=True, blind_spots=BLIND_SPOTS_V3,
+                       dormant_rules=tuple(dormant), fired_rules=("R-11",))
+    if obs.concept_evidence is True:
+        led.award("R-12",
+                  "standard tag absent from face AND notes (both read successfully), yet "
+                  f"{obs.concept_evidence_source or 'independent evidence says the concept exists'}",
+                  omission=+2)
+    if obs.peer_usage is not None:
+        used, total = obs.peer_usage
+        if total and used / total >= obs.peer_threshold:
+            led.award("R-13",
+                      f"peer SIC {obs.sic}: {used} of {total} filers use {concept.main_tags[0]}",
+                      omission=+1)
+        dormant = [d for d in dormant if not d.startswith("R-13")]
+    if ("R-01" in led.fired or "R-02" in led.fired) and "R-12" in led.fired:
+        led.fired.append("R-14")
+
+    # ---- value layer (V-00 .. V-11, with V-03' / V-08' and the R-15 gate) ----
+    target = _parse_ddate(obs.period)
+    if not value_layer:
+        dormant.append("V-01..V-11 value layer DISABLED (F2 OFF-run; v3 name layer incl. R-15)")
+    elif not obs.value_source_ok or (not obs.facts and not obs.evidence_facts):
+        dormant.append("V-01..V-11 no fact rows loaded - value layer dormant, "
+                       "NOT read as form 4 (C-9)")
+    elif target is None:
+        dormant.append("V-01..V-11 balance-sheet date unparseable - value layer dormant (C-9)")
+    else:
+        g_t, g_p, g_any = _select_balance(obs.facts, gross, target, conflicts)
+        a_t, a_p, a_any = _select_balance(obs.facts, accum, target, conflicts)
+        u_t, _u_p, _ = _select_balance(obs.facts, frozenset(concept.umbrella_tags),
+                                       target, conflicts)
+        a_t = _abs_accum(a_t, conflicts)
+        a_p = _abs_accum(a_p, conflicts)
+        if g_t is not None and g_t.value < 0:
+            conflicts.append(f"gross-negative: {g_t.tag} {g_t.ddate} = {g_t.value} - "
+                             "a cumulative acquisition cost cannot be negative (C-8)")
+            g_t = None
+        if g_p is not None and g_p.value < 0:
+            conflicts.append(f"gross-negative: {g_p.tag} {g_p.ddate} = {g_p.value} - "
+                             "a cumulative acquisition cost cannot be negative (C-8)")
+            g_p = None
+
+        # V-01 / V-01b: not in the R-15 shared list (structurally absent in the
+        # residual; kept verbatim so the dormancy stays the document's statement)
+        if g_t is not None and a_t is not None:
+            t = tau(g_t.value, a_t.value)
+            if a_t.value - g_t.value > t:
+                conflicts.append(
+                    f"accum-exceeds-gross: {a_t.value} USD ({a_t.ddate}) > gross "
+                    f"{g_t.value} USD by more than tau {t} - different pools (C-8/U-12)")
+            elif abs(g_t.value - a_t.value) <= t:
+                led.award("V-01",
+                          f"as of {g_t.ddate}: gross {g_t.value} USD, accumulated "
+                          f"{a_t.value} USD{a_t.note} - difference within display precision "
+                          f"tau={t}; the period-end net is indistinguishable from 0",
+                          not_applicable=+3, elsewhere=-2)
+            else:
+                led.award("V-01b",
+                          f"as of {g_t.ddate}: net {g_t.value - a_t.value} USD REMAINS "
+                          f"(gross {g_t.value} - accumulated {a_t.value} USD) with no standard net tag",
+                          elsewhere=+3, not_applicable=-3, omission=-3)
+
+        zero_legs = [p for p in (g_t, a_t) if p is not None and p.value == 0]
+        if zero_legs:
+            p = zero_legs[0]
+            award("V-02",
+                  f"as of {p.ddate}: {p.tag} = 0 USD (explicitly tagged) - a tagged 0 is"
+                  " an active statement, not silence",
+                  shared=True, not_applicable=+3, elsewhere=-3, omission=-2)
+
+        if g_t is not None and g_p is not None:
+            t = tau(g_t.value, g_p.value)
+            if g_t.value - g_p.value > t:
+                # V-03' (preregistration-v3 s2): scale aligned to V-07 (+2/-1),
+                # sentence replaced - the increase proves only in-period growth.
+                award("V-03'",
+                      f"gross moved {g_p.value} USD ({g_p.ddate}) -> {g_t.value} USD "
+                      f"({g_t.ddate}): the asset pool GREW during the period. The cause"
+                      " (acquisition/translation/reclassification/correction) and the"
+                      " increase's survival at period end (impairment, sub-year lives)"
+                      " are not separable from values (U-15)",
+                      shared=True, elsewhere=+2, not_applicable=-1)
+            elif g_p.value - g_t.value > t:
+                award("V-04",
+                      f"gross moved {g_p.value} USD ({g_p.ddate}) -> {g_t.value} USD "
+                      f"({g_t.ddate}): a DECREASE - a disposal/write-off occurred (weak:"
+                      " a partial disposal is not a full one)",
+                      shared=True, not_applicable=+1)
+            elif g_t.value > 0:
+                value_notes.append(
+                    f"V-05: gross unchanged at {g_t.value} USD ({g_p.ddate} -> {g_t.ddate},"
+                    f" tau={t}) - values do NOT separate forms 2 and 4 here (U-9); no score")
+        elif g_t is not None and g_any and g_p is None:
+            value_notes.append(
+                "U-10: no prior-year gross within 300-400 days - V-03/V-04/V-05 dormant;"
+                " dormancy is NOT read as form 4 (C-9)")
+
+        if a_t is not None and a_p is not None:
+            t = tau(a_t.value, a_p.value)
+            if abs(a_t.value - a_p.value) <= t and a_t.value > 0:
+                award("V-06",
+                      f"accumulated amortisation unchanged at {a_t.value} USD"
+                      f"{a_t.note} ({a_p.ddate} -> {a_t.ddate}, tau={t}) - no amortisation"
+                      " occurred in the period: nothing left to amortise (U-11: an"
+                      " indefinite-lived pool also freezes - this rule cannot tell them apart)",
+                      shared=True, not_applicable=+3, elsewhere=-2)
+            elif a_t.value - a_p.value > t:
+                award("V-07",
+                      f"accumulated amortisation moved {a_p.value} USD ({a_p.ddate}) -> "
+                      f"{a_t.value} USD ({a_t.ddate}): an INCREASE - an amortisable balance"
+                      " existed during the period (it may have been exactly exhausted at"
+                      " period end, so form 4 is only mildly discounted)",
+                      shared=True, elsewhere=+2, not_applicable=-1)
+            elif a_p.value - a_t.value > t:
+                # V-08' (preregistration-v3 s2): scale aligned to V-04 (+1).
+                award("V-08'",
+                      f"accumulated amortisation moved {a_p.value} USD ({a_p.ddate}) -> "
+                      f"{a_t.value} USD ({a_t.ddate}): a DECREASE - a cumulative account"
+                      " does not shrink by itself; the underlying asset was removed"
+                      " (a partial removal is not a full one)",
+                      shared=True, not_applicable=+1, elsewhere=-1)
+        elif a_t is not None and a_any and a_p is None:
+            value_notes.append(
+                "U-10: no prior-year accumulated amortisation within 300-400 days -"
+                " V-06/V-07/V-08 dormant; dormancy is NOT read as form 4 (C-9)")
+
+        sched = [f for f in obs.evidence_facts
+                 if f.tag in FUTURE_AMORTIZATION_SCHEDULE_TAGS and not f.coreg
+                 and f.value is not None and f.uom == "USD"]
+        sched_target = [f for f in sched
+                        if (d := _parse_ddate(f.ddate)) is not None
+                        and target - _timedelta(days=45) <= d <= target]
+        if sched_target:
+            latest = max(f.ddate for f in sched_target)
+            sched_target = [f for f in sched_target if f.ddate == latest]
+        by_key: dict[tuple[str, str], set] = {}
+        for f in sched_target:
+            by_key.setdefault((f.tag, f.ddate), set()).add(f.value)
+        bad_tags = set()
+        for (tg, dd_), vals in by_key.items():
+            if len(vals) > 1:
+                bad_tags.add(tg)
+                conflicts.append(
+                    f"duplicate-values: schedule {tg} {dd_} carries "
+                    + " vs ".join(str(v) for v in sorted(vals))
+                    + " - excluded from the V-09 sum (C-8/U-14)")
+        sched_target = [f for f in sched_target if f.tag not in bad_tags]
+        if sched_target:
+            total = sum((v for (tg, _), vals in by_key.items()
+                         if tg not in bad_tags for v in vals), Decimal(0))
+            dd = max(f.ddate for f in sched_target)
+            if total > Decimal(1):
+                award("V-09",
+                      f"future amortisation schedule totals {total} USD (as of {dd}) -"
+                      " a DIRECT statement that an unamortised balance remains at period end",
+                      shared=True, elsewhere=+3, not_applicable=-3, omission=-3)
+            elif all(f.value == 0 for f in sched_target):
+                award("V-09b",
+                      f"future amortisation schedule explicitly 0 USD for every year (as of {dd})"
+                      " - nothing left to amortise",
+                      shared=True, not_applicable=+3, elsewhere=-2)
+
+        if not (gross_hit or accum_hit or umbrella_hit):
+            exp = [f for f in obs.evidence_facts
+                   if f.tag in AMORTIZATION_EXPENSE_TAGS and not f.coreg
+                   and f.value is not None and f.uom == "USD" and f.qtrs > 0
+                   and (d := _parse_ddate(f.ddate)) is not None
+                   and target - _timedelta(days=45) <= d <= target]
+            if exp and any(f.value > Decimal(1) for f in exp):
+                f = max((f for f in exp if f.value > Decimal(1)), key=lambda f: f.ddate)
+                award("V-10",
+                      f"amortisation expense {f.value} USD ({f.qtrs} quarter(s) ending"
+                      f" {f.ddate}) observed with no balance tag - a balance existed to amortise",
+                      shared=True, elsewhere=+2, omission=-1)
+
+        if u_t is not None and u_t.value == 0:
+            led.award("V-11",
+                      f"umbrella tag {u_t.tag} = 0 USD as of {u_t.ddate} - the broader label"
+                      " itself is 0, so its subset is 0 (the one case where a value overturns R-01)",
+                      not_applicable=+3, elsewhere=-3)
+
+    displayed = [
+        RankedLine(form, score, tuple(led.notes.get(form, ())))
+        for form, score in led.scores.items()
+        if score > 0 and led.notes.get(form)
+    ]
+    if not displayed:
+        return Opinion(status="NO_VERDICT",
+                       gate_evidence="no form survived with a positive score and an observed-value line",
+                       needs_human_confirmation=True, blind_spots=BLIND_SPOTS_V3,
+                       dormant_rules=tuple(dormant), fired_rules=tuple(led.fired),
+                       value_conflicts=tuple(conflicts), value_notes=tuple(value_notes),
+                       r15_attributed=tuple(r15_attributed), r15_bonus=r15_bonus)
+
+    displayed.sort(key=lambda line: (-line.score, line.form.value))
+    tie = len(displayed) >= 2 and displayed[0].score == displayed[1].score
+    displayed = displayed[:MAX_DISPLAYED_FORMS]
+
+    return Opinion(status="RANKED", ranked=tuple(displayed),
+                   needs_human_confirmation=True, blind_spots=BLIND_SPOTS_V3,
+                   fired_rules=tuple(led.fired), dormant_rules=tuple(dormant),
+                   tie=tie, value_conflicts=tuple(conflicts),
+                   value_notes=tuple(value_notes),
+                   r15_attributed=tuple(r15_attributed), r15_bonus=r15_bonus)
 
 
 def baseline_b(obs: Observation) -> Opinion:
