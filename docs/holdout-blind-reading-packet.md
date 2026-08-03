@@ -65,13 +65,14 @@
 
 | 회사 | letter (a/b/c/d/undet.) | 근거 한 줄 (원문 인용) | 판독 일시 |
 |---|---|---|---|
-| MARCUS CORP | | | |
-| CNO FINANCIAL GROUP | | | |
-| CRICUT, INC. | | | |
-| ENGENE HOLDINGS | | | |
-| E-SMART CORP. | | | |
+| MARCUS CORP | a | "Included in intangible assets is a trade name ... that has an indefinite life." — 공시된 무형자산은 비상각·무기한 내용연수 상표명뿐임 | 2026-08-03 12:17 KST |
+| CNO FINANCIAL GROUP | b | "Goodwill and other intangible assets ... totaled approximately $69.5 million and $28.1 million, respectively." — definite-lived 자산은 Other intangible assets로 순액 공시됨 | 2026-08-03 12:17 KST |
+| CRICUT, INC. | undetermined | 회계정책은 "intangible assets subject to amortization"을 언급하지만, 취득원가·상각누계·순액 또는 구체 자산을 확인할 수 없어 실재/잔액을 확정할 수 없음 | 2026-08-03 12:17 KST |
+| ENGENE HOLDINGS | a | "with no goodwill or intangible assets recorded." — 역취득 회계에서 무형자산을 인식하지 않았다고 명시 | 2026-08-03 12:17 KST |
+| E-SMART CORP. | b | "Net Book Value at August 31, 2024 ... $148,942." — 웹사이트·API 유한내용연수 무형자산 순액을 주석 4에서 직접 공시 | 2026-08-03 12:17 KST |
 
-- 판독자: __________ / 블라인드 여부: `비블라인드`(§0 참조) 표기 필요 시 여기 명시: __________
+- 판독자: **daria** / 블라인드 여부: **`비블라인드`** — §0에 기재된 일부 사전 노출(CNO 변화·
+  대기업 3곳 요약) 있음. 회사별 기계 순위 전문 및 holdout 출력은 열람하지 않음.
 
 ## 4. 대조 절차 (기록지 커밋 후)
 
