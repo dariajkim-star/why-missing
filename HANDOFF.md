@@ -182,8 +182,9 @@ tests/           goldens.py(단일 출처) · test_contracts · test_golden_spik
 scripts/         reproduce_spike4.py(M1 재현) · build_census_with_values · measure_evidence_rules{,_v2,_v3}
                  · measure_g1_damage · spike5_* · spike6_*(레거시)
 docs/            THESIS · FINDINGS(+archived) · project-map · roadmap-branches · open-issues
-                 · evidence-rules-*(사전등록 5·결과 3·감사 2) · holdout-* · rescope-* · g1-damage-*
-                 · interview-*(사전등록·조달·키트·판정) · CLOSING · closing-checklist · spikes/ · data/
+                 · evidence-rules-*(사전등록 4·결과 3·감사 2) · holdout-* · rescope-* · g1-damage-*
+                 · interview-*(사전등록·조달·키트·판정) · CLOSING · closing-checklist
+                 · preregistration-checklist(방법론 부채 M1~M6 → 검수 항목) · spikes/ · data/
 ```
 
 - **FINDINGS.md** = 최종 산출물, **2026-08-03 통합 개정판**. 인용 시 **탐지력 검증 불가 단서
