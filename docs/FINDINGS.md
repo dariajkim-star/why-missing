@@ -5,6 +5,10 @@
 > 판정이 뒤집힌 곳마다 **"무엇이 왜 바뀌었는지"를 본문에 명시**했다. 숫자만 조용히 갈아끼운 곳은 없다.
 > 개정 사유: 이 문서는 결정 대장이 아니라 **남이 읽는 결과 보고서**이므로, 폐기된 문언을 본문에
 > 그대로 둔 채 절을 덧쌓으면 **폐기된 BLUF가 계속 인용된다.**
+>
+> 🔄 **2026-08-04 정정 1건 (§7-3)**: *"사용 검증은 한 번도 측정된 적이 없다"* → **1회 있었고
+> 오독으로 끝났다.** 07-31판 문언을 그대로 이어받으며 08-03 사용 검증을 반영하지 못한 것이다.
+> **한계를 과소진술하고 있었으므로 정정 후 한계가 세졌다.** 결과 숫자는 하나도 바뀌지 않았다.
 
 > 🔴 **영구 단서 (협상 불가 — 개정으로 더 강해졌다)**:
 > **"진짜 누락 0곳"은 "누락은 없다"로 읽어서는 안 된다.** 이 방법의 **탐지력은 검증 불가로 확정**됐다
@@ -476,8 +480,27 @@ b(다른 곳 기재)·c(애초에 0)가 **실재하는 현상**이라는 사실�
   🔄 **개정 추가 판정**: 이 창 역시 **탐지력 검증만 건드리며 C1 0관측을 뒤집지 못한다.**
 - **미국 한정.** → 한국(DART)은 주석 XBRL이 자산 규모별 단계 도입 중이라 그대로 이식 불가.
   **검증 가능한 명제로 전환**: *"6형태 분류는 이식 가능하되 형태별 빈도는 다를 것"*.
-- **🆕 사용 미검증.** **사람이 이 6형태 순위 소견 화면을 읽고 올바른 후속 행동을 하는지는
-  한 번도 측정된 적이 없다.** 홀드아웃의 청정 칸 0개(§2-3)와 같은 방향을 가리킨다.
+- **🆕 사용 검증 — 1회, 그리고 그 1회가 오독으로 끝났다.**
+  🔄 **2026-08-04 정정**: 07-31판을 이어받은 이 자리에 *"한 번도 측정된 적이 없다"*라고 썼던 것은
+  **부정확했다.** 2026-08-03에 **첫 사용 검증이 실제로 있었고, 결과는 오독이었다.**
+  정정하면 이 한계는 약해지는 것이 아니라 **세진다** — 미측정이 아니라 **관측 1건이 실패**다.
+  근거: `party-2026-08-03-verdict-output-redesign.md`.
+
+  | | |
+  |---|---|
+  | **무엇을 쟀나** | daria가 CLI를 직접 실행(`RGR finite_lived_intangibles_net`). **파일럿 사용자 1명, 1회** |
+  | **결과** | **첫 실행에서 출력을 오독.** 첫 반응은 *"도구가 틀린 판정을 했네"* — RGR은 스파이크4에서 **②로 확정**된 회사다 |
+  | **틀린 것은 무엇이었나** | **로직이 아니라 화면.** 판정은 계약대로였고(후보는 후보다), 화면이 **후보를 결론처럼 읽히게** 했다. 계약 1의 금지어를 쓰지 않았을 뿐 **금지어의 발음을 맨 윗줄에 대문자로 출력**하고 있었다 |
+  | **도구가 이미 갖고 있던 것** | `tags seen: FiniteLivedIntangibleAssetsAccumulatedAmortization` — **①에 대한 반증**(상각누계 존재 = 상각할 자산이 있고 어딘가 공시됐다)을 **수집해 인쇄까지 해놓고** 무표정한 라벨 밑에 깔았다. 부재를 증거로 착각하던 실수의 **거울상 — 존재를 무시하기** |
+
+  ⚠️ **그러나 이 관측이 §6-1의 「6형태 순위 소견 구조」를 검증하지는 않는다.** 오독된 화면은
+  **폐기된 단일 verdict 화면**이고, 6형태 구조는 **그 오독에 대한 대응으로 설계된 것**이다.
+  즉 현 설계는 **검증된 것이 아니라 관측 1건에 대한 응답**이며, 그 응답이 옳았는지는
+  **아직 아무도 측정하지 않았다**(적중률 3회전 미달로 렌더러 미착수 — 읽을 화면이 없다).
+  **자발적 재요청은 0회**다.
+
+  이 한계는 홀드아웃의 청정 칸 0개(§2-3)와 같은 방향을 가리킨다 — **엔진의 성숙도와
+  제품의 성숙도를 섞어 읽지 말 것.**
 
 ### 7-4. 설계 경계 — 보완 대상이 아니라 명시 대상
 
@@ -533,8 +556,23 @@ b(다른 곳 기재)·c(애초에 0)가 **실재하는 현상**이라는 사실�
 | 무형자산 전수 검증 | `spike-4-preregistration.md` · `spike-4-verdict.md` |
 | 양성 대조군 (탐지력) | `spike-5-positive-control-design.md` · `data/spike5-adjudication.json` · `data/spike5-x2-results.json` |
 | 값 이상치 (C′, 기각) | `spike-6-value-anomaly-preregistration.md` · `data/spike6-results-run2.json` |
-| **증거규칙 3회전** (post-hoc² 라벨 필수) | `evidence-rules-measurement-results.md` · `-v2.md` · `-v3.md` · `data/evidence-rules-measurement-v3.json` |
+| **증거규칙 3회전** (post-hoc² 라벨 필수) | **결과 3**: `evidence-rules-measurement-results.md` · `-v2.md` · `-v3.md` · `data/evidence-rules-measurement{,-v2,-v3}.json` <br> **사전등록 4**: `evidence-rules-measurement-preregistration.md` · `evidence-rules-preregistration{,-v2,-v3}.md` <br> **오염 감사 2**: `evidence-rules-v2-audit-and-measurement-addendum.md` · `-v3-...md` |
 | **홀드아웃 5곳 개봉** | `holdout-blind-reading-packet.md` · `holdout-adjudication-results.md` |
 | **G1 피해 크기 측정 (사망)** | `g1-damage-measurement-preregistration.md` · `g1-damage-measurement-results.md` · `data/g1-damage-measurement.json` |
+| **첫 사용 검증 · 출력 재설계** (**§7-3의 근거**) | `party-2026-08-03-verdict-output-redesign.md` |
 | **레아 도메인 판정 (§0의 근거)** | `rescope-2026-08-03-leah-domain-verdict.md` |
+| **재범위 파티 — 3인 독립 + 종합** (§5-2의 근거) | `rescope-2026-08-03-john-product-options.md` · `-mary-demand-and-alternatives.md` · `rescope-2026-08-03-synthesis.md` |
+| M1 골든 재현 · CLI | `m1-golden-reproduction.md` · `m3-cli.md` · `mvp-brief-absence-adjudicator.md` · `trl4-scaffolding-status.md` |
 | 정본·결정 대장 | `THESIS.md` (§10 = 2026-08-03 갱신, §10-3 인용 금지) |
+
+### 이 보고서의 **근거가 아닌** 문서 — 섞어 읽지 말 것
+
+아래는 **이 보고서의 어떤 결론도 뒷받침하지 않는다.** 08-03 이후의 **절차·상태 기록**이며,
+여기 적는 이유는 목록에서 빠지면 *"이 보고서가 프로젝트의 전부"*로 읽히기 때문이다.
+**이 문서들의 예측·판단(예: 마감 확률 ~95%)을 이 보고서의 결과로 인용하는 것은 금지한다.**
+
+| 성격 | 문서 |
+|---|---|
+| 전체 지도 · 분기 트리 · 미해결 쟁점 랭킹 | `project-map-2026-08-03.md` · `roadmap-branches-2026-08-03.md` · `open-issues-2026-08-03.md` |
+| 수요 관측 (a) — **진행 중, 결과 없음** | `rescope-interview-preregistration.md` · `interview-sourcing-channels.md` · `interview-sourcing-adjudication.md` · `interview-outreach-kit.md` |
+| 마감 문서 — **틀만 있고 미발효** | `CLOSING.md` · `closing-checklist.md` |
